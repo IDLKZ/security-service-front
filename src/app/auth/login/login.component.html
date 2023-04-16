@@ -1,0 +1,47 @@
+
+
+<div class="grid place-items-center min-h-screen p-2">
+  <div class="md:p-20 p-10 card bg-white md:w-5/12 w-full text-center">
+    <h1 class="sidebar-color-blue text-4xl">Вход</h1>
+    <div class="py-8">
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <div class="form-control-py-4">
+          <label class="">
+            <input type="text" formControlName="login" id="login" placeholder="Login" class="w-full input input-bordered" />
+          </label>
+          <div class="text-red-500" *ngIf="loginForm.controls['login'].invalid && (loginForm.controls['login'].dirty || loginForm.controls['login'].touched)">
+            <div *ngIf="loginForm.controls['login'].errors">
+              <div *ngIf="loginForm.controls['login'].errors.required">
+                Поле логин обязательно для заполнения
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-control py-4">
+          <label class="">
+            <input type="password" formControlName="password" id="password" placeholder="Password"
+                   [ngClass]="'w-full input input-bordered '"
+            />
+          </label>
+          <div class="text-red-500" *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)">
+            <div *ngIf="loginForm.controls['password'].errors">
+              <div *ngIf="loginForm.controls['password'].errors.required">
+                Поле пароль обязательно для заполнения
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn sidebar-bg-blue px-4 w-8/12" [disabled]="loginForm.invalid">
+          Войти
+        </button>
+      </form>
+
+    </div>
+
+
+
+  </div>
+</div>
+
+
+

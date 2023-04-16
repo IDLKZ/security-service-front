@@ -1,0 +1,41 @@
+<div class="py-5 px-5 grid grid-cols-10 gap-4 grid-rows-2 bg-white">
+  <div class="md:col-span-2 md:row-span-1 col-span-10">
+    <button class="btn text-white sidebar-bg-blue w-full">Проверить</button>
+  </div>
+</div>
+<div class="py-5 px-5 grid bg-white">
+  <div class="overflow-x-auto">
+    <table class="table table-compact bg-white w-full">
+      <!-- head -->
+      <thead>
+      <tr>
+        <th class="bg-white">ФАМИЛИЯ</th>
+        <th class="bg-white">ИМЯ</th>
+        <th class="bg-white">ОТЧЕСТВО</th>
+        <th class="bg-white">ИИН</th>
+        <th class="bg-white">ДАТА РОЖДЕНИЯ</th>
+        <th class="bg-white">РОСТ</th>
+        <th class="bg-white">
+          <fa-icon [icon]="faCheck"></fa-icon>
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <!-- row 1 -->
+      <tr *ngFor="let item of [1,2,3,4,5]">
+        <th class="font-normal">ФАМИЛИЯ</th>
+        <th class="font-normal">ИМЯ</th>
+        <th class="font-normal">ОТЧЕСТВО</th>
+        <td class="font-normal">12312312312</td>
+        <td class="font-normal">01.01.1990</td>
+        <td class="font-normal">180</td>
+        <td>
+          <fa-icon *ngIf="item%2 != 0" class="text-success" [icon]="faCheck"></fa-icon>
+          <fa-icon *ngIf="item%2 == 0" class="text-red-500" [icon]="faWindowClose"></fa-icon>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

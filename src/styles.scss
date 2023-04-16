@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'ngx-toastr/toastr';
+/* Background Colors Start */
+
+body{
+  background-color: #ECEDF1;
+  height: auto;
+  min-height: 100vh;
+}
+.sidebar-bg-blue{
+  background-color: #41466A;
+}
+.sidebar-color-blue{
+  color:#41466A;
+}
+.content-bg-gray{
+  background-color: #ECEDF1;
+}
+
+.content-color-gray{
+  color: #ECEDF1;
+}

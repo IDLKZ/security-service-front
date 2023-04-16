@@ -1,0 +1,75 @@
+<div class="py-5 px-5 grid grid-cols-10 gap-4 grid-rows-2 bg-white">
+  <div class="md:col-span-2 md:row-span-1 col-span-10">
+    <button class="btn text-white sidebar-bg-blue w-full">Загрузить список</button>
+  </div>
+  <div class="md:col-span-6 md:row-span-1 col-span-10">
+    <input type="text" placeholder="Search" class="input w-full input-bordered" />
+  </div>
+  <div class="md:col-span-2 md:row-span-1 col-span-10">
+    <button class="btn text-white bg-success border-0 w-full">Отправить в СМС</button>
+  </div>
+
+  <div class="md:col-span-2 md:row-span-2 col-span-10">
+    <select class="select select-bordered w-full max-w-xs bg-gray">
+      <option disabled selected>Возраст</option>
+    </select>
+  </div>
+  <div class="md:col-span-2 md:row-span-2 col-span-10">
+    <select class="select select-bordered w-full max-w-xs bg-gray">
+      <option disabled selected>Статус</option>
+    </select>
+  </div>
+  <div class="md:col-span-2 md:row-span-2 col-span-10">
+    <select class="select select-bordered w-full max-w-xs bg-gray">
+      <option disabled selected>Регион</option>
+    </select>
+  </div>
+  <div class="md:col-span-2 md:row-span-2 col-span-10">
+    <select class="select select-bordered w-full max-w-xs bg-gray">
+      <option disabled selected>Мову</option>
+    </select>
+  </div>
+  <div class="md:col-span-2 md:row-span-1 col-span-10">
+    <button class="btn text-white bg-success border-0 w-full">Применить</button>
+  </div>
+</div>
+<div class="py-5 px-5 grid bg-white">
+  <div class="overflow-x-auto">
+    <table class="table table-compact bg-white w-full">
+      <!-- head -->
+      <thead>
+      <tr>
+        <th class="bg-white">ФИО</th>
+        <th class="bg-white">ТЕЛЕФОН</th>
+        <th class="bg-white">ИИН</th>
+        <th class="bg-white">ВОЗРАСТ</th>
+        <th class="bg-white">РЕГИОН</th>
+        <th class="bg-white">ДДО/УДО/ОДО</th>
+        <th class="bg-white">Статус</th>
+        <th class="bg-white">Статус</th>
+        <th class="bg-white">
+          <fa-icon [icon]="faCheck"></fa-icon>
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <!-- row 1 -->
+      <tr *ngFor="let item of [1,2,3,4,5,6,7,8,9]">
+        <th class="font-bold">ФАМИЛИЯ ИМЯ ОТЧЕСТВО</th>
+        <td class="font-bold">01.01.1990</td>
+        <td class="font-bold">12312312312</td>
+        <td class="font-bold">{{33}}</td>
+        <td class="font-bold">Карагандинский</td>
+        <td class="font-bold">Казыбекский</td>
+        <td class="font-bold">Приписник</td>
+        <td class="font-bold">Приписник</td>
+        <td>
+          <fa-icon *ngIf="item%2 != 0" class="text-success" [icon]="faCheck"></fa-icon>
+          <fa-icon *ngIf="item%2 == 0" class="text-red-500" [icon]="faWindowClose"></fa-icon>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
